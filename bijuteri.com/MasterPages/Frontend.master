@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frontend.master.cs" Inherits="MasterPages_Frontend" %>
+
+<%@ Register Src="~/Controls/ButtomSideNav.ascx" TagPrefix="uc1" TagName="ButtomSideNav" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            $('.has-sub').click(function () {
+                $(this).toggleClass('tap');
+            });
+        });
+
+    </script>
+    <style type="text/css">
+        
+        .main-nav{width:240.8px; height:276px; background:rgb(128, 128, 128);}
+        .main-nav li {list-style:none;}
+            .main-nav a {
+                color:#FFF;
+                text-transform:uppercase;
+                letter-spacing:.2em;
+                text-decoration:none;
+                display: block;
+                padding: 10px 0 10px 10px;
+                border-bottom:2px solid black;
+            }
+            .main-nav-ul ul{display:none;}
+            .main-nav-ul li.tap ul{display:block;}
+
+            
+
+            .main-nav .sub-arrow:after{
+                content:'\203A';
+                float:right;
+                margin-right:20px;
+                transform:rotate(90deg);
+                -webkit-transform:rotate(90deg);
+                -moz-transform:rotate(90deg);
+            }
+
+            .main-nav li.tap .sub-arrow:after{
+                content:'\2039';
+            }
+
+        .auto-style1 {
+            width: 70px;
+            height: 45px;
+        }
+
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="PageWrapper">
+        <div id="Header">
+            <div style="text-align:right; margin-top:25px;">
+            <asp:Label ID="toplamTutar" runat="server" Text="" Text-Align="Right"></asp:Label>
+            </div>
+        </div>
+        <div style="text-align:right;color:black; background-color:white;">
+            <asp:Label ID="Isim" runat="server" Width="75px"></asp:Label>
+            <a href="/AlisverisSepeti.aspx"><img alt="Alısveris Sepeti" class="auto-style1" src="../Resimler/alısverissepeti.png" /></a>
+            
+            <asp:Button ID="Cikis" runat="server" Text="Cikis" OnClick="Cikis_Click" Visible="false" />
+             <asp:Button ID="Giris" runat="server" Text="Giriş"  OnClick="Giris_Click"  />
+           
+        </div>
+        
+        <div id="MenuWrapper">
+            <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" 
+                DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="false">
+            </asp:Menu>
+
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+
+        </div>
+        
+        <div id="Sidebar">
+            <div class="main-nav">
+                <ul>
+                    <li><a href="/SubMenu/Kolye.aspx">Kolye</a></li>
+
+                    <li><a href="/SubMenu/Kupe.aspx">Kupe</a></li>
+
+                    <!--Postback'i kapatip dene..
+                        <li class="has-sub"><a href="#">Kupe<span class="sub-arrow"></span></a>
+                        <ul>
+                            <li><a href="#">item1</a></li>
+                            <li><a href="#">item1</a></li>
+                            <li><a href="#">item1</a></li>
+                        </ul>
+                    </li>-->
+                    
+
+                    
+                    <li><a href="/SubMenu/Bileklik.aspx">Bileklik</a></li>
+                    <li><a href="/SubMenu/Yuzuk.aspx">Yuzuk</a></li>
+                    <li><a href="/SubMenu/SacAksesuari.aspx">Sac Aksesuarı</a></li>
+                    <li><a href="/SubMenu/Toka.aspx">Toka</a></li>
+                    <li><a href="/Hakkinda.aspx">Hakkımızda</a></li>
+                        
+                </ul>
+            </div>
+            
+         
+       
+        </div>
+
+        
+            
+        
+        <div id="MainContent">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+
+
+            </asp:SiteMapPath><br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+      
+        
+       
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div id="Footer">bijuteri.com</div>
+    </div>
+        
+    </form>
+</body>
+</html>

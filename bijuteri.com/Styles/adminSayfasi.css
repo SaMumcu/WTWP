@@ -1,0 +1,40 @@
+﻿*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+.frame{
+    width:1000px;
+    height:auto;
+    margin:0 auto;
+}
+
+    .frame .head{
+        width:1000px;
+        height:100px;
+        background-color:#808080;
+        float:left;
+    }
+
+    .frame .body{
+        width:1000px;
+        height:auto;
+        float:left;
+        margin-top:20px;
+
+    }
+
+        .frame .body .bodyleft{
+            width:270px;
+            height:auto;
+            border:1px dotted #ff6a00;
+            float:left;
+        }
+
+        .frame .body .bodyright{
+            width:700px;
+            height:auto;
+            float:right;
+            border:1px dotted #ff6a00;
+        }

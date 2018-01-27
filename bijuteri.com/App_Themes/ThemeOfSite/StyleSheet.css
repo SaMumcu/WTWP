@@ -1,0 +1,430 @@
+﻿*
+{
+  /* 
+    Defines the main font used throughout the entire site 
+  */
+  font-family: Arial, Sans-Serif;
+  
+}
+
+body
+{
+    /* 
+    Clears white space around the body and gives it a color.
+  */
+    margin: 0;
+    background-color:White;
+}
+
+a
+{
+  
+  text-decoration: none;
+  
+}
+
+a:hover
+{
+    /*
+    Underlines links when the user hovers the mouse over them.
+  */
+    text-decoration: none;
+    color:White;
+}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:active {text-decoration: none;}
+
+h1
+{
+  /*
+    Makes h1 elements smaller than their browser default.
+  */
+  font-size : 20px;
+}
+
+h2
+{
+    /* 
+    Gives h2 elements a different background color and size, 
+    and adds a bit of margin at the top to create room between the heading and the preceding element.
+  */
+    font-size: 14px;
+    color: #FF6600;
+    margin-top: 10px;
+}
+
+#PageWrapper
+{
+    /*
+    Sets the total width for the entire page. Also sets the background-color
+    which is used to fill the background of the Sidebar in case the MainContent block is taller than the Sidebar.
+    Uses margin: auto to center the entire page in the middle of the browser's window.
+  */
+    width: 960px;
+    background-color:black;
+    /*  #913900*/
+    margin:0 auto;
+
+}
+#PageWrapper a:hover{
+   text-decoration: none;
+}
+
+#Header
+{
+    /*
+    Gives the header the same width as the PageWrapper.
+  */
+    width: 960px;
+    height:25px;
+    background-color:white;
+}
+
+#Header a
+{
+  /*
+    The #Header a is a link nested in #Header. It provides a link back to the homepage.
+    The size of the link is the same as the header, so the entire header is clickable.
+  */
+  width: 844px; 
+  height: 86px; 
+  display: block;  
+}
+
+#MenuWrapper
+{
+    /*
+    The menu spans the page width, right below the header.
+    At the top and left a few pixels padding is applied to create some room.
+  */
+    margin:0 auto;
+    width: 100%;
+    height: 35px;
+
+}
+
+#MenuWrapper a
+{
+  /*
+    Links in the Menu are white. 
+  */
+  color: #fff;
+}
+#MenuWrapper a:hover{
+    color:red;
+}
+
+.MainMenu
+{
+    /*
+    The Menu gets a colored border on all four sides.
+  */
+    
+    margin:0 auto;
+    width: 100%;/*900/960*/
+    text-align: center;
+}
+
+.MainMenu ul{
+    display: inline-block;
+    list-style-type: none;
+   
+}
+
+.MainMenu ul li
+{
+  /*
+    Gives the four menu items in the main menu a width of 200px each
+  */
+  padding-top:9px;
+  padding-bottom:9px;
+  padding-left:7px;
+  padding-right:6.4px;
+  border: 1px solid #fff;
+  width: 225px;
+}
+
+/*sidebar için submenu*/
+.SubMenu{
+    
+    padding-top:45px;
+    margin:0 auto;
+    text-align: left;
+    padding-left:0px;
+}
+
+
+.SubMenu ul{
+
+    display: inline-block;
+    list-style-type: none;
+}
+.SubMenu ul li{
+    padding-top:15px;
+    padding-left:0px;
+    border: 1px solid #fff;
+    width: 120px;
+}
+
+
+
+
+
+/*
+
+    .SubMenu ul li:hover ul {
+        display:block;
+    
+    }
+
+.SubMenu li a{
+    display:block;
+    padding:8px;
+    border-left:4px solid #444;
+    text-decoration:none;
+    box-shadow:2px 2px 5px #ccc;
+    color:#555;
+
+}
+
+
+.SubMenu li a:hover{
+    border-left:4px solid #069;
+    background:#f8f8f8;
+
+}
+
+.SubMenu ul li ul li a{
+    position:absolute;
+    top:0px;
+    left:25px;
+    display:none;
+}
+
+
+    .SubMenu li ul{
+        display:none;
+    }
+    .SubMenu li:hover ul{ display:block;}
+    .SubMenu li:hover ul li{ background:#333;}
+    .SubMenu li:hover ul li a{color:#ccc;}
+    .SubMenu li:hover ul li a{background:#222; border-left:4px solid #900;}
+
+*/
+
+
+#MainContent
+{
+    /*
+    Defines the main content area. The #MainContent element has a minimum height of 500 pixels, but can grow if necessary.
+    The font-size is 80% of its parent element, which in this case comes down to 80% of the font
+    the user has specified as the default font in the browser.
+  */
+    font-size: 0.8em;
+    width: 73%; /*650/900*/
+    float: right;
+    background-color: #FEFEF5;
+    
+    min-height: 600px;
+    padding-left: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+
+}
+
+#MainContent .default{
+    width:200px; 
+    height:215px; 
+    background-color:white; 
+    float:left;
+    margin:12px;
+    border:2px dashed;
+}
+
+
+
+#MainContent .default:hover{
+    border:2px black solid;
+}
+
+#Sidebar
+{   font-size: 0.8em;
+    background-color:grey; /*#FF9933*/
+    width: 23%;
+    height: 240px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    float: left;
+
+
+}
+
+#Sidebar2{
+    font-size: 0.8em;
+    background-color:black; /*#FF9933*/
+    width: 23%;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    float: left;
+    margin-top:350px;
+}
+
+.bottom-nav{
+    border:2px dashed;
+     margin-top:50px;
+     float: left;
+     text-align:center;
+     line-height:25px;
+     
+}
+
+.main-nav{
+    background-color:grey;
+    float:left;
+}
+
+
+
+.main-nav a:hover{
+    text-decoration: none;
+    color:black;
+   
+}
+
+
+#Footer
+{
+    /*
+    The footer is positioned below all other content (yet still within PageWrapper).
+    clear: both is used to clear the impact of the float properties used for #MainContent and #Sidebar.
+  */
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   height:40px;
+   line-height:40px;
+   width:100%;
+   background:Black;
+   color:white;
+   text-align:center;
+}
+
+.Introduction
+{
+  font-style: italic;
+  color: #3e3e3e;
+}
+
+
+/*admin sayfasi*/
+.frame{
+    width:1000px;
+    height:auto;
+    margin:0 auto;
+}
+
+    .frame .head{
+        width:1000px;
+        height:100px;
+        background-color:#808080;
+        float:left;
+    }
+
+    .frame .body{
+        width:1000px;
+        height:auto;
+        float:left;
+        margin-top:20px;
+
+    }
+
+    .frame .body .bodyleft{
+            
+            width:270px;
+            height:auto;
+            border:1px dotted #B1C216;
+            float:left;
+        }
+
+    .frame .body .bodyright{
+            width:700px;
+            height:auto;
+            float:right;
+            border:1px dotted #B1C216;
+        }
+
+        .txt{
+            width:120px;
+            height:25px;
+            border:1px dotted #808080;
+        }
+        .btn{
+            width:100px;
+            height:25px;
+            background-color:#fff;
+            color:#00ffff;
+        }
+        .btn:hover{
+            background-color:#808080;
+        }
+ .ddl{
+            width:100px;
+            height:24px;
+            border:1px dotted #B1C216;
+
+}
+
+
+ .musteriHeader{
+     color:white;
+     width:400px;
+     float:right;
+     height:auto;
+
+ }
+
+ .musteriHeaderLeft{
+     color:white;
+     width:150px;
+     height:auto;
+     float:left;
+ }
+ .musteriHeaderRight{
+
+     width:200px;
+     height:auto;
+     float:right;
+ }
+
+
+ .MyButton{
+     background-color:red;
+     width:100px;
+     height:25px;
+     color:black;
+     text-decoration-style:solid;
+ }
+
+ .button1{
+     background-color:black;
+     width:100px;
+     height:25px;
+     color:white;
+     text-decoration-style:solid;
+ }
+
+ .RedB{
+     width:75px;
+     height:25px;
+     color:black;
+     text-decoration-style:solid;
+     font-size:medium;
+ }
+
+
+ 
